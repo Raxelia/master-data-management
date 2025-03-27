@@ -1,7 +1,20 @@
 package com.mentoring.mdm.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
-@Document(collection = "products")
-public record Product(@Id String id, String name) {}
+@Entity
+@Getter
+@Setter
+public class Product {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
+  private String name;
+}
