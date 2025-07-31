@@ -26,6 +26,10 @@ public class ProductService {
     return productRepository.findProductsByExactName(name);
   }
 
+  public List<Product> getProductsByNameCriteria(String name) {
+    return productRepository.findByNameUsingCriteria(name);
+  }
+
   // --- SAVE ---
   public Product saveProduct(Product product) {
     return productRepository.save(product);
