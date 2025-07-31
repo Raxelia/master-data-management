@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
-public class ImproperAndImproperInjectionController {
+public class ImproperAndProperInjectionController {
 
   private final ImproperInjectionService improperInjectionService;
 

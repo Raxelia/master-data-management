@@ -32,8 +32,8 @@ public class ProductService {
   }
 
   public void updateProductCategory(String productId, String newCategory) {
-    Query query = new Query(Criteria.where("_id").is(productId)); // Query by ID
-    Update update = new Update().set("category", newCategory); // Update the category field
+    Query query = new Query(Criteria.where("_id").is(productId));
+    Update update = new Update().set("category", newCategory);
 
     mongoTemplate.updateFirst(query, update, Product.class);
   }
