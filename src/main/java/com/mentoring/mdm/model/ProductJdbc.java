@@ -3,12 +3,12 @@ package com.mentoring.mdm.model;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.relational.core.mapping.Table;
 
-@Document("products")
-@Getter
+@Table("products")
 @Setter
-public class Product {
+@Getter
+public class ProductJdbc {
 
   @Id private String id;
 
